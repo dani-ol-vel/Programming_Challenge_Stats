@@ -12,7 +12,7 @@ navbar:
   right:
   - icon: fa-github
     text: Source code
-    href: https://github.com/dan-ol-vel/Programming_Challenge_Stats
+    href: https://github.com/dani-ol-vel/Programming_Challenge_Stats
 output:
   workflowr::wflow_html:
     toc: yes
