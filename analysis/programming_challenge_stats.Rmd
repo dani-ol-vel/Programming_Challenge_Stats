@@ -11,7 +11,7 @@ editor_options:
 
 We analyzed different variables to see if we found correlation
 
-```{r read data}
+```{r read data, echo=FALSE}
 # read data
 library(utils)
 library(tidyverse)
