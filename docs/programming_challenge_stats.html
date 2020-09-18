@@ -27,6 +27,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -368,7 +370,13 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats">
+    <span class="fa fa-github"></span>
+     
+    Source code
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -405,7 +413,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2020-09-17
+<strong>Last updated:</strong> 2020-09-18
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -496,22 +504,23 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrong894d8bf"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> 894d8bf </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdaniolvelProgrammingChallengeStatstree886efe667f0e16d7ec56c93118008b8b5b26343ctargetblank886efe6a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats/tree/886efe667f0e16d7ec56c93118008b8b5b26343c" target="_blank">886efe6</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrong894d8bf" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdaniolvelProgrammingChallengeStatstree886efe667f0e16d7ec56c93118008b8b5b26343ctargetblank886efe6a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version 894d8bf. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats/tree/886efe667f0e16d7ec56c93118008b8b5b26343c" target="_blank">886efe6</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
+    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
 </code></pre>
@@ -553,10 +562,44 @@ Message
 <tbody>
 <tr>
 <td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats/blob/886efe667f0e16d7ec56c93118008b8b5b26343c/analysis/programming_challenge_stats.Rmd" target="_blank">886efe6</a>
+</td>
+<td>
+dani-ol-vel
+</td>
+<td>
+2020-09-18
+</td>
+<td>
+wflow_publish(“analysis/programming_challenge_stats.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
 html
 </td>
 <td>
-894d8bf
+<a href="https://rawcdn.githack.com/dani-ol-vel/Programming_Challenge_Stats/1e6a6855013c5b36ac5771304bec885d76bed49f/docs/programming_challenge_stats.html" target="_blank">1e6a685</a>
+</td>
+<td>
+dani-ol-vel
+</td>
+<td>
+2020-09-17
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/dani-ol-vel/Programming_Challenge_Stats/894d8bf67f74d8724c56ef8dd45a9b4616fc04a0/docs/programming_challenge_stats.html" target="_blank">894d8bf</a>
 </td>
 <td>
 dani-ol-vel
@@ -573,7 +616,7 @@ Build site.
 Rmd
 </td>
 <td>
-1cbd10f
+<a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats/blob/1cbd10f93d78c957672c3a1d804d8f738fbbd37a/analysis/programming_challenge_stats.Rmd" target="_blank">1cbd10f</a>
 </td>
 <td>
 dani-ol-vel
@@ -600,6 +643,16 @@ wflow_publish(“analysis/programming_challenge_stats.Rmd”)
 <p>We analyzed different variables to see if we found correlation</p>
 <pre class="r"><code># read data
 library(utils)
+library(tidyverse)</code></pre>
+<pre><code>-- Attaching packages ---------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>v ggplot2 3.3.2     v purrr   0.3.4
+v tibble  3.0.3     v dplyr   1.0.2
+v tidyr   1.1.2     v stringr 1.4.0
+v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>-- Conflicts ------------------------------------------------------------------- tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(dplyr)
 
 #read the Dataset sheet into “R”. The dataset will be called &quot;data&quot;.
 data &lt;- read.csv(&quot;https://opendata.ecdc.europa.eu/covid19/casedistribution/csv&quot;, 
@@ -607,33 +660,68 @@ data &lt;- read.csv(&quot;https://opendata.ecdc.europa.eu/covid19/casedistributi
 </div>
 <div id="covid-19-cases-and-length-of-a-countrys-name" class="section level2">
 <h2>COVID-19 cases and length of a country’s name</h2>
-<pre class="r"><code>data1 &lt;- data[(data$dateRep==&quot;11/08/2020&quot;), ]  
-name_sz &lt;- nchar(data1$countriesAndTerritories)
-# build a linear model for the relationship between 
-# Cumulative_number_for_14_days_of_COVID.19_cases_per_100000 and 
-# the number of characters in the name of a country.
-model1&lt;- lm(Cumulative_number_for_14_days_of_COVID.19_cases_per_100000~name_sz, 
-            data=data1)
-summary(model1)</code></pre>
+<pre class="r"><code>#examine the relationship between name length of countries and covid cases
+#mutate to add a variable of name length
+data1&lt;- data %&gt;% 
+  mutate(name_len= str_length(countriesAndTerritories))
+
+#fit a linear regression model of the variables
+model1&lt;-lm(Cumulative_number_for_14_days_of_COVID.19_cases_per_100000 ~ name_len, data1)
+summary(model1) </code></pre>
 <pre><code>
 Call:
 lm(formula = Cumulative_number_for_14_days_of_COVID.19_cases_per_100000 ~ 
-    name_sz, data = data1)
+    name_len, data = data1)
 
 Residuals:
-   Min     1Q Median     3Q    Max 
--54.10 -46.82 -34.45   9.62 432.80 
+    Min      1Q  Median      3Q     Max 
+-180.10  -32.32  -28.21   -6.51 1024.70 
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)   46.582     10.757   4.330 2.32e-05 ***
-name_sz        0.258      1.002   0.257    0.797    
+(Intercept) 34.37564    0.75266  45.672   &lt;2e-16 ***
+name_len    -0.16958    0.07201  -2.355   0.0185 *  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
-Residual standard error: 78.78 on 207 degrees of freedom
-Multiple R-squared:  0.00032,   Adjusted R-squared:  -0.004509 
-F-statistic: 0.06626 on 1 and 207 DF,  p-value: 0.7971</code></pre>
+Residual standard error: 75.76 on 40726 degrees of freedom
+  (2781 observations deleted due to missingness)
+Multiple R-squared:  0.0001362, Adjusted R-squared:  0.0001116 
+F-statistic: 5.546 on 1 and 40726 DF,  p-value: 0.01853</code></pre>
+<p>The results suggest significantly negative association between name length and covid cases (p= .023). However, the model is poorly fitted(Adjusted R-squared: 0.0001028). The relationship between name length and covid cases cannot be causal. Based on the Bradford Hill’s criteria for causation, a plausible mechanism between cause and effect is important for causal implications. Apparently there lacks a plausibility in the examined relationship.</p>
+</div>
+<div id="correlation-between-a-weekday-and-number-of-reported-covid-deaths-in-poland" class="section level2">
+<h2>Correlation between a weekday and number of reported covid deaths in Poland</h2>
+<pre class="r"><code>#convert dates to weekdays in numeric format
+data2 &lt;- data
+data2$weekday_no &lt;- as.numeric(strftime(as.Date(data2$dateRep, &quot;%d/%m/%Y&quot;), &quot;%u&quot;))
+
+#Subset for Poland
+data2_Poland &lt;- data2 %&gt;%
+  filter(countriesAndTerritories == &quot;Poland&quot;)
+
+#fit a linear regression model
+model2 &lt;- lm(deaths ~ weekday_no, data = data2_Poland)
+summary(model2)</code></pre>
+<pre><code>
+Call:
+lm(formula = deaths ~ weekday_no, data = data2_Poland)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.1724  -5.5947  -0.1724   4.7158  27.4053 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   9.1290     1.2384   7.372 4.68e-12 ***
+weekday_no    0.5776     0.2773   2.083   0.0385 *  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 7.769 on 195 degrees of freedom
+Multiple R-squared:  0.02177,   Adjusted R-squared:  0.01675 
+F-statistic: 4.339 on 1 and 195 DF,  p-value: 0.03855</code></pre>
+<p>There is a positive significant correlation (p = 0.0408) between the day of a week and number of deaths caused by COVID-19 in Poland. This correlation doesn’t seem to occur for many of the other European countries, with focus on Slavic countries, countries with a similar population, as well as countries with similar ratings of anti-COVID response - it seem to be accidental. In other words, in order to obtain this correlation, the country has been cherry-picked from the pool of other countries, that don’t show any similar correlation, and the relationship lacks plausible causality.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -659,17 +747,25 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] workflowr_1.6.2
+ [1] forcats_0.5.0   stringr_1.4.0   dplyr_1.0.2     purrr_0.3.4    
+ [5] readr_1.3.1     tidyr_1.1.2     tibble_3.0.3    ggplot2_3.3.2  
+ [9] tidyverse_1.3.0 workflowr_1.6.2
 
 loaded via a namespace (and not attached):
- [1] Rcpp_1.0.5       rstudioapi_0.11  whisker_0.4      knitr_1.29      
- [5] magrittr_1.5     R6_2.4.1         rlang_0.4.7      stringr_1.4.0   
- [9] tools_4.0.2      xfun_0.17        git2r_0.27.1     htmltools_0.5.0 
-[13] ellipsis_0.3.1   rprojroot_1.3-2  yaml_2.2.1       digest_0.6.25   
-[17] tibble_3.0.3     lifecycle_0.2.0  crayon_1.3.4     later_1.1.0.1   
-[21] vctrs_0.3.4      promises_1.1.1   fs_1.5.0         glue_1.4.2      
-[25] evaluate_0.14    rmarkdown_2.3    stringi_1.5.3    compiler_4.0.2  
-[29] pillar_1.4.6     backports_1.1.10 httpuv_1.5.4     pkgconfig_2.0.3 </code></pre>
+ [1] tidyselect_1.1.0 xfun_0.17        haven_2.3.1      colorspace_1.4-1
+ [5] vctrs_0.3.4      generics_0.0.2   htmltools_0.5.0  yaml_2.2.1      
+ [9] blob_1.2.1       rlang_0.4.7      later_1.1.0.1    pillar_1.4.6    
+[13] withr_2.2.0      glue_1.4.2       DBI_1.1.0        dbplyr_1.4.4    
+[17] modelr_0.1.8     readxl_1.3.1     lifecycle_0.2.0  munsell_0.5.0   
+[21] gtable_0.3.0     cellranger_1.1.0 rvest_0.3.6      evaluate_0.14   
+[25] knitr_1.29       httpuv_1.5.4     fansi_0.4.1      broom_0.7.0     
+[29] Rcpp_1.0.5       promises_1.1.1   backports_1.1.10 scales_1.1.1    
+[33] jsonlite_1.7.1   fs_1.5.0         hms_0.5.3        digest_0.6.25   
+[37] stringi_1.5.3    rprojroot_1.3-2  grid_4.0.2       cli_2.0.2       
+[41] tools_4.0.2      magrittr_1.5     crayon_1.3.4     whisker_0.4     
+[45] pkgconfig_2.0.3  ellipsis_0.3.1   xml2_1.3.2       reprex_0.3.0    
+[49] lubridate_1.7.9  assertthat_0.2.1 rmarkdown_2.3    httr_1.4.2      
+[53] rstudioapi_0.11  R6_2.4.1         git2r_0.27.1     compiler_4.0.2  </code></pre>
 </div>
 </div>
 
