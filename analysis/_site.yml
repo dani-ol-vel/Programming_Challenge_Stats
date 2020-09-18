@@ -1,7 +1,7 @@
-name: "Programming_Challenge_Stats"
+name: Programming_Challenge_Stats
 output_dir: ../docs
 navbar:
-  title: "Programming_Challenge_Stats"
+  title: Programming_Challenge_Stats
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fa-github
+    text: Source code
+    href: https://github.com/dan-ol-vel/Programming_Challenge_Stats
 output:
   workflowr::wflow_html:
     toc: yes
