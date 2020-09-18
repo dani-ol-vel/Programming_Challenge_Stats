@@ -6,8 +6,7 @@ output: workflowr::wflow_html
 editor_options:
   chunk_output_type: console
 ---
-## Programming Challenge Stats
-## C. Jacchus
+## Programming Challenge Stats by  C. Jacchus
 
 We analyzed different variables to see if we found correlation
 
@@ -37,7 +36,7 @@ model1<-lm(Cumulative_number_for_14_days_of_COVID.19_cases_per_100000 ~ name_len
 summary(model1) 
 ```
 
-The results suggest significantly negative association between name length and covid cases (p= .023). However, the model is poorly fitted(Adjusted R-squared:  0.0001028). The relationship between name length and covid cases cannot be causal. Based on the Bradford Hill's criteria for causation, a plausible mechanism between cause and effect is important for causal implications. Apparently there lacks a plausibility in the examined relationship.
+The results suggest significantly negative association between name length and covid cases (p= .01853). However, the model is poorly fitted(Adjusted R-squared:  0.0001116). The relationship between name length and covid cases cannot be causal. Based on the Bradford Hill's criteria for causation, a plausible mechanism between cause and effect is important for causal implications. Apparently there lacks a plausibility in the examined relationship.
 
 ## Correlation between a weekday and number of reported covid deaths in Poland
 
@@ -55,4 +54,4 @@ model2 <- lm(deaths ~ weekday_no, data = data2_Poland)
 summary(model2)
 ```
 
-There is a positive significant correlation (p = 0.0408) between the day of a week and number of deaths caused by COVID-19 in Poland. This correlation doesn't seem to occur for many of the other European countries, with focus on Slavic countries, countries with a similar population, as well as countries with similar ratings of anti-COVID response - it seem to be accidental. In other words, in order to obtain this correlation, the country has been cherry-picked from the pool of other countries, that don't show any similar correlation, and the relationship lacks plausible causality.
+There is a positive significant correlation (p = 0.03855) between the day of a week and number of deaths caused by COVID-19 in Poland. This correlation doesn't seem to occur for many of the other European countries, with focus on Slavic countries, countries with a similar population, as well as countries with similar ratings of anti-COVID response - it seem to be accidental. In other words, in order to obtain this correlation, the country has been cherry-picked from the pool of other countries, that don't show any similar correlation, and the relationship lacks plausible causality.
