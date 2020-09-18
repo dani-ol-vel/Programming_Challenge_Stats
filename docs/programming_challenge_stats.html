@@ -504,16 +504,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdaniolvelProgrammingChallengeStatstree886efe667f0e16d7ec56c93118008b8b5b26343ctargetblank886efe6a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats/tree/886efe667f0e16d7ec56c93118008b8b5b26343c" target="_blank">886efe6</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomdaniolvelProgrammingChallengeStatstree3cfae0c2857e139f2c7b9f3cedfac1ce29849ccatargetblank3cfae0ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats/tree/3cfae0c2857e139f2c7b9f3cedfac1ce29849cca" target="_blank">3cfae0c</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomdaniolvelProgrammingChallengeStatstree886efe667f0e16d7ec56c93118008b8b5b26343ctargetblank886efe6a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomdaniolvelProgrammingChallengeStatstree3cfae0c2857e139f2c7b9f3cedfac1ce29849ccatargetblank3cfae0ca" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats/tree/886efe667f0e16d7ec56c93118008b8b5b26343c" target="_blank">886efe6</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats/tree/3cfae0c2857e139f2c7b9f3cedfac1ce29849cca" target="_blank">3cfae0c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -560,6 +560,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/dani-ol-vel/Programming_Challenge_Stats/blob/3cfae0c2857e139f2c7b9f3cedfac1ce29849cca/analysis/programming_challenge_stats.Rmd" target="_blank">3cfae0c</a>
+</td>
+<td>
+dani-ol-vel
+</td>
+<td>
+2020-09-18
+</td>
+<td>
+wflow_publish(“analysis/programming_challenge_stats.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/dani-ol-vel/Programming_Challenge_Stats/1e18e1c8c59daa7fc64476dc5dc11358773c2f61/docs/programming_challenge_stats.html" target="_blank">1e18e1c</a>
+</td>
+<td>
+dani-ol-vel
+</td>
+<td>
+2020-09-18
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -641,9 +675,6 @@ wflow_publish(“analysis/programming_challenge_stats.Rmd”)
 <div id="c.-jacchus" class="section level2">
 <h2>C. Jacchus</h2>
 <p>We analyzed different variables to see if we found correlation</p>
-<pre class="r"><code># read data
-library(utils)
-library(tidyverse)</code></pre>
 <pre><code>-- Attaching packages ---------------------------------------------------------------- tidyverse 1.3.0 --</code></pre>
 <pre><code>v ggplot2 3.3.2     v purrr   0.3.4
 v tibble  3.0.3     v dplyr   1.0.2
@@ -652,11 +683,6 @@ v readr   1.3.1     v forcats 0.5.0</code></pre>
 <pre><code>-- Conflicts ------------------------------------------------------------------- tidyverse_conflicts() --
 x dplyr::filter() masks stats::filter()
 x dplyr::lag()    masks stats::lag()</code></pre>
-<pre class="r"><code>library(dplyr)
-
-#read the Dataset sheet into “R”. The dataset will be called &quot;data&quot;.
-data &lt;- read.csv(&quot;https://opendata.ecdc.europa.eu/covid19/casedistribution/csv&quot;, 
-                 na.strings = &quot;&quot;, fileEncoding = &quot;UTF-8-BOM&quot;)</code></pre>
 </div>
 <div id="covid-19-cases-and-length-of-a-countrys-name" class="section level2">
 <h2>COVID-19 cases and length of a country’s name</h2>
