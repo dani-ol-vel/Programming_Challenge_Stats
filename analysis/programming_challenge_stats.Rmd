@@ -14,6 +14,8 @@ We analyzed different variables to see if we found correlation
 ```{r read data}
 # read data
 library(utils)
+library(tidyverse)
+library(dplyr)
 
 #read the Dataset sheet into “R”. The dataset will be called "data".
 data <- read.csv("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv", 
@@ -23,14 +25,34 @@ data <- read.csv("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv",
 
 ## COVID-19 cases and length of a country's name
 
-``` {r  size of name}
-data1 <- data[(data$dateRep=="11/08/2020"), ]  
-name_sz <- nchar(data1$countriesAndTerritories)
-# build a linear model for the relationship between 
-# Cumulative_number_for_14_days_of_COVID.19_cases_per_100000 and 
-# the number of characters in the name of a country.
-model1<- lm(Cumulative_number_for_14_days_of_COVID.19_cases_per_100000~name_sz, 
-            data=data1)
-summary(model1)
+
+```{r}
+#examine the relationship between name length of countries and covid cases
+#mutate to add a variable of name length
+data1<- data %>% 
+  mutate(name_len= str_length(countriesAndTerritories))
+
+#fit a linear regression model of the variables
+model1<-lm(Cumulative_number_for_14_days_of_COVID.19_cases_per_100000 ~ name_len, data1)
+summary(model1) 
 ```
 
+The results suggest significantly negative association between name length and covid cases (p= .023). However, the model is poorly fitted(Adjusted R-squared:  0.0001028). The relationship between name length and covid cases cannot be causal. Based on the Bradford Hill's criteria for causation, a plausible mechanism between cause and effect is important for causal implications. Apparently there lacks a plausibility in the examined relationship.
+
+## Correlation between a weekday and number of reported covid deaths in Poland
+
+```{r}
+#convert dates to weekdays in numeric format
+data2 <- data
+data2$weekday_no <- as.numeric(strftime(as.Date(data2$dateRep, "%d/%m/%Y"), "%u"))
+
+#Subset for Poland
+data2_Poland <- data2 %>%
+  filter(countriesAndTerritories == "Poland")
+
+#fit a linear regression model
+model2 <- lm(deaths ~ weekday_no, data = data2_Poland)
+summary(model2)
+```
+
+There is a positive significant correlation (p = 0.0408) between the day of a week and number of deaths caused by COVID-19 in Poland. This correlation doesn't seem to occur for many of the other European countries, with focus on Slavic countries, countries with a similar population, as well as countries with similar ratings of anti-COVID response - it seem to be accidental. In other words, in order to obtain this correlation, the country has been cherry-picked from the pool of other countries, that don't show any similar correlation, and the relationship lacks plausible causality.
