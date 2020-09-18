@@ -1,0 +1,36 @@
+---
+title: "programming_challenge_stats"
+author: "dani-ol-vel"
+date: "2020-09-17"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+## Programming Challenge Stats
+## C. Jacchus
+
+We analyzed different variables to see if we found correlation
+
+```{r read data}
+# read data
+library(utils)
+
+#read the Dataset sheet into “R”. The dataset will be called "data".
+data <- read.csv("https://opendata.ecdc.europa.eu/covid19/casedistribution/csv", 
+                 na.strings = "", fileEncoding = "UTF-8-BOM")
+
+```
+
+## COVID-19 cases and length of a country's name
+
+``` {r  size of name}
+data1 <- data[(data$dateRep=="11/08/2020"), ]  
+name_sz <- nchar(data1$countriesAndTerritories)
+# build a linear model for the relationship between 
+# Cumulative_number_for_14_days_of_COVID.19_cases_per_100000 and 
+# the number of characters in the name of a country.
+model1<- lm(Cumulative_number_for_14_days_of_COVID.19_cases_per_100000~name_sz, 
+            data=data1)
+summary(model1)
+```
+
